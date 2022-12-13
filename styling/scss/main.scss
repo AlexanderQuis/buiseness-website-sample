@@ -1,0 +1,52 @@
+@import "./variables";
+@import "./default";
+
+.image-section {
+	color: $main-bg;
+}
+
+.background {
+	background: url('./../../stockphoto-programming.jpg') no-repeat;
+	background-size: cover;
+	padding: 10em 0;
+
+	color: $main-bg;
+	p {color: $main-bg;}
+
+	div {
+		background-color: rgba(30, 30, 30, 0.8);
+		padding: 1.5rem 5rem;
+	}
+}
+
+.reviews {
+	h2 {
+		margin: 1rem 0 2rem 0;
+	}
+	h3 {color: $foot-bg;}
+
+	.stars {
+		margin: 0;
+		text-align: right;
+		color: $foot-text-color;
+
+		span {
+			margin: -3px 5px 0 0;
+			font-size: 1.25rem;
+		}
+	}
+}
+
+.page-content {
+	margin: 0;
+	padding: 0;
+}
+
+.page-content > *:nth-child(even) {
+	background-color: $foot-bg;
+	color: $foot-text-color;
+
+	h1, h2, h3 {color: $main-bg;}
+	p {color: $foot-text-color;}
+}
+

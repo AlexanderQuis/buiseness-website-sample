@@ -1,0 +1,151 @@
+body {
+	margin: 0;
+}
+
+header {
+	font-family: $font-header;
+
+	top: 0;
+	position: sticky;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	outline: 1px solid $foot-bg;
+	background-color: $main-bg;
+	padding: 1rem 4rem;
+
+	& > * {
+		flex-grow: 1;
+ 		margin: 0;
+	}
+
+	.head-title {
+		img {
+			height: 1.75rem;
+			vertical-align: middle;
+			margin-bottom: 2px;
+		}
+		a {
+			@include interactLink(0, #000);
+			color: #000;
+		}
+	}
+
+	ul {
+		display: flex;
+		justify-content: right;
+	}
+
+	li {
+		display: inline-block;
+
+		a.target {
+			font-weight: 800;
+		}
+		a {
+			@include interactLink(1em, #000);
+			color: #000;
+		}
+
+		&:last-child > a {
+			background-color: $seco-bg;
+		}
+	}
+}
+
+ul {
+	padding: 0;
+	list-style-type: none;
+}
+p {color: $foot-bg;}
+
+a {
+	text-decoration: none;
+	color: $foot-text-color;
+}
+
+section {
+	background-color: $main-bg;
+	font-family: $font-other;
+
+	display: block;
+	padding: 3em 4em;
+
+	&.pad-offset {
+		padding-top: 1rem;
+	}
+}
+
+.flex-center {
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+
+	margin-bottom: 2rem;
+
+	gap: 3rem;
+
+	li {
+		flex-grow: 1;
+		text-align: center;
+	}
+}
+
+.footer {
+	background-color: $foot-bg;
+	color: $main-bg;
+
+	padding: 0;
+
+	a {@include interactLink(0, $foot-text-color);}
+
+	p {color: $foot-text-color;}
+	li {text-align: left;}
+	& > * {padding: 1rem 4rem;}
+
+	.flex-center {
+		flex: 1 1 0px;
+
+		li {flex-basis: 0;}
+		li li {margin: 1rem 0;}
+	}
+
+	.social-media {	
+		padding-left: 1rem;
+
+		li {display: block;}
+
+		a {
+			font-family: $font-other;
+			color: $foot-text-color;
+		}
+	}
+
+	.footer-copyright {
+		padding: 0.2rem 2rem;
+		background-color: $foot-bottom-bg;
+
+		p {
+			text-align: center;
+		}
+	}
+}
+
+@media (max-width: 790px) {
+	header {
+		flex-direction: column;
+		padding: 1em;
+		gap: 1.5rem;
+	}
+
+	section {
+		padding: 2.5em 2em;
+	}
+
+	.flex-center {
+		flex-direction: column;
+		gap: 1rem;
+	}
+}

@@ -1,0 +1,42 @@
+$main-bg: #f0f7f4;
+$seco-bg: #99E1D9;
+
+$seco-odd-bg: #705D56;
+
+$foot-bg: #303035;
+$foot-bottom-bg: #202025;
+
+$foot-text-color: #666;
+
+$font-header: monospace;
+$font-other: sans-serif;
+
+
+@mixin removeLinkDeco {
+	text-decoration: none;
+}
+
+@mixin interactLink($padWidth, $color) {
+	@include removeLinkDeco();
+
+	padding: 0.4rem $padWidth;
+	position: relative;
+
+	&:before {
+		position: absolute;
+		content: '';
+		
+		width: 0;
+		height: 2px;
+
+		bottom: 0;
+		left: 50%;
+
+		background-color: $color;
+		transition: 0.15s;
+	}
+	&:hover:before {
+		width: 100%;
+		left: 0;
+	}
+}
