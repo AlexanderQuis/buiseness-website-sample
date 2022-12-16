@@ -25,6 +25,10 @@
 	}
 	h3 {color: $foot-bg;}
 
+	.flex-center {
+		flex: 1 1 0px;
+		li {flex-basis: 0;}
+	}
 	.stars {
 		margin: 0;
 		text-align: right;

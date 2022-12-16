@@ -1,5 +1,6 @@
 body {
 	margin: 0;
+	background-color: $foot-bg;
 }
 
 header {
@@ -21,18 +22,6 @@ header {
  		margin: 0;
 	}
 
-	.head-title {
-		img {
-			height: 1.75rem;
-			vertical-align: middle;
-			margin-bottom: 2px;
-		}
-		a {
-			@include interactLink(0, #000);
-			color: #000;
-		}
-	}
-
 	ul {
 		display: flex;
 		justify-content: right;
@@ -52,6 +41,18 @@ header {
 		&:last-child > a {
 			background-color: $seco-bg;
 		}
+	}
+}
+
+.head-title {
+	img {
+		height: 1.75rem;
+		vertical-align: middle;
+		margin-bottom: 2px;
+	}
+	a {
+		@include interactLink(0, #000);
+		color: #000;
 	}
 }
 
@@ -92,6 +93,24 @@ section {
 		text-align: center;
 	}
 }
+.flex-even {
+	flex: 1 1 0px;
+	li {flex-basis: 0;}
+}
+
+.background {
+	background: url('./../../stockphoto-programming.jpg') no-repeat;
+	background-size: cover;
+	padding: 10em 0;
+
+	color: $main-bg;
+	p {color: $main-bg;}
+
+	div {
+		background-color: rgba(30, 30, 30, 0.9);
+		padding: 1.5rem 5rem;
+	}
+}
 
 .footer {
 	background-color: $foot-bg;
@@ -105,12 +124,11 @@ section {
 	li {text-align: left;}
 	& > * {padding: 1rem 4rem;}
 
-	.flex-center {
-		flex: 1 1 0px;
-
-		li {flex-basis: 0;}
-		li li {margin: 1rem 0;}
+	.head-title > a {
+		color: $main-bg;
+		font-family: $font-header;
 	}
+	.flex-center li li {margin: 1rem 0;}
 
 	.social-media {	
 		padding-left: 1rem;

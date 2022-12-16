@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background-color: #303035;
 }
 
 header {
@@ -16,31 +17,6 @@ header {
 header > * {
   flex-grow: 1;
   margin: 0;
-}
-header .head-title img {
-  height: 1.75rem;
-  vertical-align: middle;
-  margin-bottom: 2px;
-}
-header .head-title a {
-  text-decoration: none;
-  padding: 0.4rem 0;
-  position: relative;
-  color: #000;
-}
-header .head-title a:before {
-  position: absolute;
-  content: "";
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  left: 50%;
-  background-color: #000;
-  transition: 0.15s;
-}
-header .head-title a:hover:before {
-  width: 100%;
-  left: 0;
 }
 header ul {
   display: flex;
@@ -74,6 +50,32 @@ header li a:hover:before {
 }
 header li:last-child > a {
   background-color: #99E1D9;
+}
+
+.head-title img {
+  height: 1.75rem;
+  vertical-align: middle;
+  margin-bottom: 2px;
+}
+.head-title a {
+  text-decoration: none;
+  padding: 0.4rem 0;
+  position: relative;
+  color: #000;
+}
+.head-title a:before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: #000;
+  transition: 0.15s;
+}
+.head-title a:hover:before {
+  width: 100%;
+  left: 0;
 }
 
 ul {
@@ -112,6 +114,27 @@ section.pad-offset {
   text-align: center;
 }
 
+.flex-even {
+  flex: 1 1 0px;
+}
+.flex-even li {
+  flex-basis: 0;
+}
+
+.background {
+  background: url("./../../stockphoto-programming.jpg") no-repeat;
+  background-size: cover;
+  padding: 10em 0;
+  color: #f0f7f4;
+}
+.background p {
+  color: #f0f7f4;
+}
+.background div {
+  background-color: rgba(30, 30, 30, 0.9);
+  padding: 1.5rem 5rem;
+}
+
 .footer {
   background-color: #303035;
   color: #f0f7f4;
@@ -145,11 +168,9 @@ section.pad-offset {
 .footer > * {
   padding: 1rem 4rem;
 }
-.footer .flex-center {
-  flex: 1 1 0px;
-}
-.footer .flex-center li {
-  flex-basis: 0;
+.footer .head-title > a {
+  color: #f0f7f4;
+  font-family: monospace;
 }
 .footer .flex-center li li {
   margin: 1rem 0;
@@ -190,50 +211,38 @@ section.pad-offset {
   color: #f0f7f4;
 }
 
-.background {
-  background: url("./../../stockphoto-programming.jpg") no-repeat;
-  background-size: cover;
-  padding: 10em 0;
+input, select {
+  display: block;
+  padding: 0.5rem;
+  background: transparent;
   color: #f0f7f4;
 }
-.background p {
+input::placeholder, select::placeholder {
   color: #f0f7f4;
-}
-.background div {
-  background-color: rgba(30, 30, 30, 0.8);
-  padding: 1.5rem 5rem;
 }
 
-.reviews h2 {
-  margin: 1rem 0 2rem 0;
+input[type=submit] {
+  cursor: pointer;
+  padding: 0.5rem 2rem;
+  transition: 0.2s;
 }
-.reviews h3 {
+input[type=submit]:hover {
+  background-color: #f0f7f4;
   color: #303035;
 }
-.reviews .stars {
-  margin: 0;
-  text-align: right;
-  color: #666;
+
+.background {
+  background-size: cover;
 }
-.reviews .stars span {
-  margin: -3px 5px 0 0;
-  font-size: 1.25rem;
+.background li {
+  text-align: center;
+}
+.background li p {
+  text-align: left;
+  margin: 0 0 1rem 0;
+}
+.background div > p {
+  margin-bottom: 2rem;
 }
 
-.page-content {
-  margin: 0;
-  padding: 0;
-}
-
-.page-content > *:nth-child(even) {
-  background-color: #303035;
-  color: #666;
-}
-.page-content > *:nth-child(even) h1, .page-content > *:nth-child(even) h2, .page-content > *:nth-child(even) h3 {
-  color: #f0f7f4;
-}
-.page-content > *:nth-child(even) p {
-  color: #666;
-}
-
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=services.css.map */

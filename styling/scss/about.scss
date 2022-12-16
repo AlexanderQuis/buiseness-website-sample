@@ -1,0 +1,17 @@
+@import "./variables";
+@import "./default";
+
+.employees{
+	h1 {
+		margin-bottom: 4rem;
+	}
+
+	li {
+		//outline: 1px solid $foot-bg;
+	}
+	img {
+		border: 3px solid $foot-bg;
+		width: 120px;
+		height: 120px;
+	}
+}
